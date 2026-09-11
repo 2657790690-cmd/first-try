@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AI INFORMATION：来自官方渠道的 AI 资讯精选。" />
+    <title>AI INFORMATION — Verified AI Briefing</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700&display=swap');
+
+      :root { --ink:#0b0b0b; --paper:#f4f3ef; --line:#242424; --muted:#999995; --soft:#d8d7d1; --signal:#e9482b; }
+      * { box-sizing:border-box; }
+      html { background:var(--ink); scroll-behavior:smooth; }
+      body { margin:0; color:var(--paper); background:radial-gradient(circle at 83% 8%, #252525 0, transparent 23rem), var(--ink); font-family:Manrope, 'Noto Serif SC', sans-serif; }
+      a { color:inherit; text-decoration:none; }
+      .shell { width:min(1440px, calc(100% - 48px)); margin:auto; }
+      .eyebrow, .meta, .filter, .source-link, .site-footer { font-family:'DM Mono', monospace; letter-spacing:.06em; text-transform:uppercase; }
+      .topline { border-bottom:1px solid #3b3b3a; min-height:46px; display:flex; align-items:center; justify-content:space-between; font-size:10px; color:#c5c4bd; }
+      .status { display:flex; align-items:center; gap:9px; } .dot { width:7px; height:7px; border-radius:50%; background:var(--signal); box-shadow:0 0 15px var(--signal); }
+      header { display:grid; grid-template-columns:1fr auto; gap:32px; padding:56px 0 41px; border-bottom:1px solid #3b3b3a; }
+      h1 { margin:0; font-size:clamp(52px, 8.1vw, 127px); letter-spacing:-.087em; line-height:.82; font-weight:800; }
+      .title-mark { display:block; margin-left:-.055em; }
+      .intro { max-width:330px; align-self:end; padding-bottom:5px; color:#bebdb7; font-size:14px; line-height:1.7; }
+      .intro b { color:var(--paper); font-weight:600; }
+      .control-row { display:flex; justify-content:space-between; align-items:center; gap:18px; padding:18px 0; border-bottom:1px solid #3b3b3a; }
+      .count { margin:0; font-size:12px; color:#a6a59f; }
+      .filter-set { display:flex; flex-wrap:wrap; gap:7px; }
+      .filter { cursor:pointer; color:#aaa9a2; border:1px solid #4a4a47; background:transparent; border-radius:999px; padding:7px 10px; font-size:10px; transition:.2s ease; }
+      .filter:hover, .filter.active { color:var(--ink); background:var(--paper); border-color:var(--paper); }
+      .section-heading { display:grid; grid-template-columns:102px 1.35fr .92fr .92fr 96px; gap:16px; color:#85847e; padding:16px 0 12px; border-bottom:1px solid #3b3b3a; font-size:10px; }
+      .feed { margin-bottom:54px; }
+      .news-card { display:grid; grid-template-columns:102px 1.35fr .92fr .92fr 96px; gap:16px; padding:25px 0 27px; border-bottom:1px solid #3b3b3a; transition:background .25s ease, padding .25s ease; }
+      .news-card:hover { background:rgba(255,255,255,.045); padding-left:11px; padding-right:11px; }
+      .date { font:500 11px/1.4 'DM Mono',monospace; color:#d2d1cb; }
+      .brand { display:block; color:#92918b; font:10px/1.4 'DM Mono',monospace; letter-spacing:.08em; text-transform:uppercase; margin-bottom:9px; }
+      h2 { font-family:'Noto Serif SC', Georgia, serif; font-size:clamp(19px, 2vw, 29px); line-height:1.25; letter-spacing:-.04em; margin:0; font-weight:600; }
+      .summary, .context { margin:0; color:#bbb9b3; font-size:13px; line-height:1.65; }
+      .context { color:#898883; }
+      .source-link { align-self:start; justify-self:end; display:inline-flex; align-items:center; gap:6px; font-size:10px; color:#f1f0ea; border-bottom:1px solid #797873; padding-bottom:4px; white-space:nowrap; }
+      .source-link::after { content:'↗'; font-size:15px; line-height:0; }
+      .source-link:hover { color:var(--signal); border-color:var(--signal); }
+      .method { border-top:1px solid #3b3b3a; display:grid; grid-template-columns:1.5fr 1fr; gap:28px; padding:27px 0 47px; }
+      .method h3 { margin:0 0 8px; font-size:12px; font-family:'DM Mono',monospace; font-weight:500; text-transform:uppercase; letter-spacing:.08em; }
+      .method p { margin:0; max-width:680px; color:#9f9e98; font-size:13px; line-height:1.65; }
+      .method strong { color:var(--paper); font-weight:600; }
+      .site-footer { border-top:1px solid #3b3b3a; display:flex; justify-content:space-between; padding:15px 0 26px; font-size:10px; color:#777670; }
+      @media (max-width:820px) { .shell{width:min(100% - 30px, 680px)} .topline span:last-child{display:none} header{grid-template-columns:1fr;gap:24px;padding:40px 0 30px}.intro{max-width:440px}.section-heading{display:none}.news-card{grid-template-columns:72px 1fr;gap:10px;padding:23px 0}.date{grid-row:1}.story{grid-column:2}.summary{grid-column:2}.context{grid-column:2}.source-link{grid-column:2;justify-self:start;margin-top:2px}.news-card:hover{padding-left:0;padding-right:0;background:transparent}.method{grid-template-columns:1fr;gap:13px}.control-row{align-items:flex-start;flex-direction:column} }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <div class="topline eyebrow"><span class="status"><i class="dot"></i> Official-source briefing</span><span>Issue 01 / 11 Sep 2026 / Shanghai</span></div>
+      <header>
+        <div><h1>AI <span class="title-mark">INFORMATION</span></h1></div>
+        <p class="intro">从公开的<strong>一手公告</strong>中筛选：少一点噪音，多一点已经核实、值得保留的 AI 变化。</p>
+      </header>
+      <section class="control-row" aria-label="资讯筛选"><p class="count">06 / VERIFIED UPDATES</p><div class="filter-set"><button class="filter active" data-filter="all">全部</button><button class="filter" data-filter="OpenAI">OpenAI</button><button class="filter" data-filter="Google">Google</button><button class="filter" data-filter="Anthropic">Anthropic</button><button class="filter" data-filter="Microsoft">Microsoft</button></div></section>
+      <main class="feed">
+        <div class="section-heading eyebrow"><span>时间</span><span>内容</span><span>背景</span><span></span><span>渠道</span></div>
+        <article class="news-card" data-company="OpenAI" data-verified="true"><time class="date" datetime="2026-09-08">SEP 08<br>2026</time><div class="story"><span class="brand">OpenAI / Product</span><h2>推出 ChatGPT Images 2.5</h2></div><p class="summary">OpenAI 发布新版 ChatGPT 图像能力，作为其产品更新的一部分对外推出。</p><p class="context">图像生成与编辑正成为通用 AI 助手的基础交互层；此次更新反映产品侧持续迭代。</p><a class="source-link" href="https://openai.com/index/introducing-chatgpt-images-2-5/" target="_blank" rel="noopener noreferrer">官方原文</a></article>
+        <article class="news-card" data-company="OpenAI" data-verified="true"><time class="date" datetime="2026-09-03">SEP 03<br>2026</time><div class="story"><span class="brand">OpenAI / Research</span><h2>发布 GPT‑6 Astra</h2></div><p class="summary">OpenAI 宣布 GPT‑6 Astra，并计划向 ChatGPT 订阅用户、API 与云平台逐步开放。</p><p class="context">公告重点覆盖电脑操作、软件工程与安全能力，同时说明了面向高风险网络能力的额外防护。</p><a class="source-link" href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener noreferrer">官方原文</a></article>
+        <article class="news-card" data-company="Google" data-verified="true"><time class="date" datetime="2026-09-02">SEP 02<br>2026</time><div class="story"><span class="brand">Google / Security</span><h2>启动 Fairwind 网络防御计划</h2></div><p class="summary">Google 面向受信任的政府与合作伙伴，提供先进 AI 网络防御能力的有限访问计划。</p><p class="context">首批能力结合 Gemini 3.8 Flash Cyber 与 CodeMender，聚焦自动发现、验证和修复漏洞。</p><a class="source-link" href="https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/" target="_blank" rel="noopener noreferrer">官方原文</a></article>
+        <article class="news-card" data-company="Microsoft" data-verified="true"><time class="date" datetime="2026-09-01">SEP 01<br>2026</time><div class="story"><span class="brand">Microsoft / Governance</span><h2>发布 2026 负责任 AI 透明度报告</h2></div><p class="summary">Microsoft 发布第三份年度透明度报告，概述其 AI 治理、工具与实践的演进。</p><p class="context">内容特别关注具备记忆、工具调用和行动能力的智能体系统，以及持续生命周期治理。</p><a class="source-link" href="https://blogs.microsoft.com/on-the-issues/2026/09/01/responsible-ai-in-2026-how-we-are-adapting-for-whats-ahead/" target="_blank" rel="noopener noreferrer">官方原文</a></article>
+        <article class="news-card" data-company="Anthropic" data-verified="true"><time class="date" datetime="2026-09-01">SEP 01<br>2026</time><div class="story"><span class="brand">Anthropic / Enterprise</span><h2>公布 Enterprise Frontier Safeguards</h2></div><p class="summary">Anthropic 宣布 EFS：在客户控制的云基础设施中结合零数据留存与滥用检测防护。</p><p class="context">面向受监管行业对数据驻留与安全监测的双重需求，计划分阶段向客户推出。</p><a class="source-link" href="https://www.anthropic.com/news/enterprise-frontier-safeguards" target="_blank" rel="noopener noreferrer">官方原文</a></article>
+        <article class="news-card" data-company="Google" data-verified="true"><time class="date" datetime="2026-08-31">AUG 31<br>2026</time><div class="story"><span class="brand">Google / Search</span><h2>扩展生成式搜索中的站长控制项</h2></div><p class="summary">Google 更新网站所有者工具，允许站点管理者控制链接和内容是否出现在生成式搜索功能中。</p><p class="context">该控制项覆盖 AI Overviews 与 AI Mode 等功能，并与 Search Console 的流量洞察一并推进。</p><a class="source-link" href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/" target="_blank" rel="noopener noreferrer">官方原文</a></article>
+      </main>
+      <section class="method"><div><h3>核验方法</h3><p><strong>仅收录公司官网或官方博客。</strong>每条保留原始发布日期、公开链接与简洁背景；不以二手报道、传闻或未经证实的社交帖作为事实来源。</p></div><p>编辑原则：优先模型、产品、部署与治理的实质性更新。页面更新于 2026 年 9 月 11 日。</p></section>
+      <footer class="site-footer"><span>AI INFORMATION</span><span>CURATED / NOT AUTOMATED</span></footer>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll('.filter');
+      const cards = document.querySelectorAll('.news-card');
+      buttons.forEach((button) => button.addEventListener('click', () => {
+        buttons.forEach((item) => item.classList.toggle('active', item === button));
+        cards.forEach((card) => { card.hidden = button.dataset.filter !== 'all' && card.dataset.company !== button.dataset.filter; });
+        document.querySelector('.count').textContent = `${[...cards].filter((card) => !card.hidden).length.toString().padStart(2, '0')} / VERIFIED UPDATES`;
+      }));
+    </script>
+  </body>
+</html>
